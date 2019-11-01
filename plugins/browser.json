@@ -1,0 +1,25 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "c4h9i.firebase.test"
+    },
+    "phonegap-plugin-push": {
+      "PACKAGE_NAME": "c4h9i.firebase.test"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-support-google-services": {
+      "PACKAGE_NAME": "c4h9i.firebase.test"
+    },
+    "phonegap-plugin-multidex": {
+      "PACKAGE_NAME": "c4h9i.firebase.test"
+    }
+  }
+}

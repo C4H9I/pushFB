@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase TEST</title>
+    <script src="cordova.js"></script>
+    <script>
+        document.addEventListener('deviceready', onDeviceReady, false);
+        function onDeviceReady() {
+            console.log("device ready");
+            var push = PushNotification.init({
+                android:{}
+            });
+
+            push.on('registration', function (data) {
+                // data.registrationId
+                console.log(data.registrationId);
+            });
+
+            push.on('notification', function (data) {
+                alert("Title:"+data.title+" Message:"+ data.message);
+            });
+
+            push.on('error', function (e) {
+                console.log(e.message)
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="register()">Register My Device</button>
+</body>
+
+</html>
